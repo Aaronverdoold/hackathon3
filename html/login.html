@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="../php/login.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="wachtwoord">Wachtwoord</label>
+                <input type="password" id="wachtwoord" name="wachtwoord" required>
+            </div>
+            <button type="submit" name="login" value="login" class="btn">Login</button>
+
+            <div class="mt-4 text-center">
+                Nog geen account? <a href="sign.html">Create One</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

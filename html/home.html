@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<nav>
+    <div class= "navbar">
+        <ul>
+            <li><a href="../html/home.html">Home</a></li>
+            <li><a href="../php/index.php">Contact</a></li>
+            <li><a href="../html/login.html">Inloggen</a></li>
+            <img src="../img/Logo.jpg" class="logo" alt="Description of the image">
+        </ul>
+    </div>
+</nav>
+
+<section class="name">
+  <h1>Gensconnect</h1>
+</section>
+
+<section id="about" class="about">
+    <div class="main">
+        <img src="../img/Gert.jpg" alt="Description of the image">
+        <div class="about-text">
+            <h2>Grootvader Gert</h2>
+            <h5> Vrolijke, levendige gepensioneerde <span>man</span></h5>
+            <p>Op Gensconnect een website voor Grootvader Gert kan hij communiceren en goede herinneringen creëren met zijn kinderen en zijn kleinkinderen
+              zonder moeilijkheden te ervaren vanwege een te moeilijk te begrijpen webpage, want een e-mail schrijven is al moeilijk genoeg
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Video call -->
+
+  <div class="video">
+  <title>Video Call System</title>
+  <style>
+    #localVideo, #remoteVideo {
+      width: 320px;
+      height: 240px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Video Call System</h1>
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+  <button onclick="startCall()">Start Call</button>
+  <button onclick="endCall()">End Call</button>
+    </div>
+
+  <script>
+    let localStream, remoteStream;
+    const localVideo = document.getElementById('localVideo');
+    const remoteVideo = document.getElementById('remoteVideo');
+
+    async function startCall() {
+      try {
+        localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+        localVideo.srcObject = localStream;
+
+        // Send signaling message to server to initiate call
+        // This part will be handled by the backend
+
+      } catch (error) {
+        console.error('Error accessing media devices:', error);
+      }
+    }
+
+    function endCall() {
+      localStream.getTracks().forEach(track => track.stop());
+      localVideo.srcObject = null;
+      remoteVideo.srcObject = null;
+
+      // Send signaling message to server to end call
+      // This part will be handled by the backend
+    }
+  </script>
+</body>
+</html>

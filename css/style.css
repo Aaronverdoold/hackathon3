@@ -1,0 +1,165 @@
+
+body {
+  background: rgb(180,255,250);
+  background: linear-gradient(0deg, rgba(180,255,250,1) 21%, rgba(7,114,233,1) 79%);
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2; /* Set a background color for the body */
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  height: 160vh;
+}
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Use rgba for transparency */
+    border-radius: 40px; /* Apply border-radius for round corners */
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+  }
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+/* Style the navigation links on hover */
+.navbar a:hover {
+    color: black;
+}
+
+.logo{
+padding-left: 1000px;
+height: auto;
+width: 90px;
+}
+
+.name{
+  color: white;
+  margin-left: 650px;
+  margin-top: 70px;
+  font-size: 25px;
+  text-transform: capitalize;
+
+}
+
+.about{
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.about img{
+ height: auto;
+ width: 430px;
+ border-radius: 10px;
+ 
+}
+
+.about-text{
+ width: 550px;
+}
+
+.main{
+ width: 1130px;
+ max-width: 95%;
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ padding-top: 25px;
+}
+
+.about-text h2{
+ color: white;
+ font-size: 32px;
+ text-transform: capitalize;
+ margin-bottom: 20px;
+}
+
+.about-text h5{
+ color: white;
+ letter-spacing: 2px;
+ font-size: 22px;
+ margin-bottom: 25px;
+ text-transform: capitalize;
+}
+
+.about-text p{
+ color: white;
+ letter-spacing: 1px;
+ line-height: 28px;
+ font-size: 18px;
+ margin-bottom: 45px
+}
+
+
+
+.title{
+    color: white;
+    margin-left: 530px;
+    margin-top: 150px;
+
+  }
+  
+  form input, form textarea {
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .input-gegevens{
+    margin-left: 400px; 
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+  
+  .gegevens {
+    display: flex;
+    margin-top: 65px;
+  }
+  
+  .contact-button{
+    top: 25px;
+    background: #8c7edc;
+    color: white;
+    font-size: 16px;
+    padding: 12px 50px;
+    margin: 20px 0;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .contact-button:hover{
+    transform: translateY(-5px);
+  }
+  
+  .video{
+    color: white;
+    margin-left: 450px;
+    padding-top: 50px;
+  }
+
+
